@@ -20,17 +20,23 @@ spec:
     spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: techtrends
-        ports:
-        - containerPort: {{ .Values.containerPort }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         readinessProbe:
           httpGet:
             path: {{ .Values.readinessProbe.path }}
-            port: {{ .Values.containerPort }}
+            port: {{ .Values.readinessProbe.port }}
         livenessProbe:
           httpGet:
             path: {{ .Values.livenessProbe.path }}
-            port: {{ .Values.containerPort }}
+            port: {{ .Values.livenessProbe.port }}
+        ports:
+        - containerPort: {{ .Values.containerPort }}
         resources:
-{{ toYaml .Values.resources | indent 12 }}
+          requests:
+            cpu: {{ .Values.resources.requests.CPU }}
+            memory: {{ .Values.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.resources.limits.CPU }}
+            memory: {{ .Values.resources.limits.memory }}
+status: {}

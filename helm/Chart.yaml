@@ -1,10 +1,10 @@
 apiVersion: v1
 name: techtrends
-description: Install TechTrends deployment manifests
+description: techtrends using kubernetes/helm
 keywords:
   - python
   - techtrends
-version: 1.0.0
+version: 3.7.0
 maintainers:
   - name: janlosigkeit
     email: jan.losigkeit26@gmail.com

@@ -8,10 +8,10 @@ docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
-docker logs 8f648e324816a61f00154a1e2da035a8c2efcbf0d48ebb53966dab031131e467
+docker logs 8596fdc37522843825959dde6b51a250c5368be28e5c9abe79bf13c696754504
 
 ## Logs from the container running the TechTrends application
-PS C:\Users\jlosi\Desktop\nd064_course_1\project\techtrends> docker logs 8f648e324816a61f00154a1e2da035a8c2efcbf0d48ebb53966dab031131e467
+PS C:\Users\jlosi\Desktop\nd064_course_1\project\techtrends> docker logs 8596fdc37522843825959dde6b51a250c5368be28e5c9abe79bf13c696754504
  * Serving Flask app 'app' (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
